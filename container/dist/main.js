@@ -15,7 +15,7 @@
   \**********************/
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("Promise.all(/*! import() */[__webpack_require__.e(\"vendors-node_modules_react_jsx-runtime_js\"), __webpack_require__.e(\"src_bootstrap_js\")]).then(__webpack_require__.bind(__webpack_require__, /*! ./bootstrap */ \"./src/bootstrap.js\"));\n\n//# sourceURL=webpack://container/./src/index.js?");
+eval("Promise.all(/*! import() */[__webpack_require__.e(\"vendors-node_modules_react-dom_client_js-node_modules_react_jsx-runtime_js\"), __webpack_require__.e(\"src_bootstrap_js-webpack_sharing_consume_default_react-dom_react-dom\")]).then(__webpack_require__.bind(__webpack_require__, /*! ./bootstrap */ \"./src/bootstrap.js\"));\n\n//# sourceURL=webpack://container/./src/index.js?");
 
 /***/ }),
 
@@ -82,30 +82,6 @@ eval("/**\n * @license React\n * scheduler.development.js\n *\n * Copyright (c) 
 
 "use strict";
 eval("\n\nif (false) {} else {\n  module.exports = __webpack_require__(/*! ./cjs/scheduler.development.js */ \"./node_modules/scheduler/cjs/scheduler.development.js\");\n}\n\n\n//# sourceURL=webpack://container/./node_modules/scheduler/index.js?");
-
-/***/ }),
-
-/***/ "webpack/container/reference/calendar":
-/*!****************************************************************!*\
-  !*** external "calendar@http://localhost:5000/remoteEntry.js" ***!
-  \****************************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-var __webpack_error__ = new Error();
-module.exports = new Promise((resolve, reject) => {
-	if(typeof calendar !== "undefined") return resolve();
-	__webpack_require__.l("http://localhost:5000/remoteEntry.js", (event) => {
-		if(typeof calendar !== "undefined") return resolve();
-		var errorType = event && (event.type === 'load' ? 'missing' : event.type);
-		var realSrc = event && event.target && event.target.src;
-		__webpack_error__.message = 'Loading script failed.\n(' + errorType + ': ' + realSrc + ')';
-		__webpack_error__.name = 'ScriptExternalLoadError';
-		__webpack_error__.type = errorType;
-		__webpack_error__.request = realSrc;
-		reject(__webpack_error__);
-	}, "calendar");
-}).then(() => (calendar));
 
 /***/ }),
 
@@ -313,10 +289,9 @@ module.exports = new Promise((resolve, reject) => {
 /******/ 	/* webpack/runtime/remotes loading */
 /******/ 	(() => {
 /******/ 		var chunkMapping = {
-/******/ 			"src_bootstrap_js": [
+/******/ 			"src_bootstrap_js-webpack_sharing_consume_default_react-dom_react-dom": [
 /******/ 				"webpack/container/remote/modal/modal",
-/******/ 				"webpack/container/remote/header/Navigation",
-/******/ 				"webpack/container/remote/calendar/Module"
+/******/ 				"webpack/container/remote/header/Navigation"
 /******/ 			]
 /******/ 		};
 /******/ 		var idToExternalAndNameMapping = {
@@ -329,11 +304,6 @@ module.exports = new Promise((resolve, reject) => {
 /******/ 				"default",
 /******/ 				"./Navigation",
 /******/ 				"webpack/container/reference/header"
-/******/ 			],
-/******/ 			"webpack/container/remote/calendar/Module": [
-/******/ 				"default",
-/******/ 				"./Module",
-/******/ 				"webpack/container/reference/calendar"
 /******/ 			]
 /******/ 		};
 /******/ 		__webpack_require__.f.remotes = (chunkId, promises) => {
@@ -422,7 +392,6 @@ module.exports = new Promise((resolve, reject) => {
 /******/ 				case "default": {
 /******/ 					register("react-dom", "18.1.0", () => (() => (__webpack_require__(/*! ./node_modules/react-dom/index.js */ "./node_modules/react-dom/index.js"))), 1);
 /******/ 					register("react", "18.1.0", () => (() => (__webpack_require__(/*! ./node_modules/react/index.js */ "./node_modules/react/index.js"))), 1);
-/******/ 					initExternal("webpack/container/reference/calendar");
 /******/ 					initExternal("webpack/container/reference/header");
 /******/ 					initExternal("webpack/container/reference/modal");
 /******/ 				}
@@ -573,8 +542,8 @@ module.exports = new Promise((resolve, reject) => {
 /******/ 		});
 /******/ 		var installedModules = {};
 /******/ 		var moduleToHandlerMapping = {
-/******/ 			"webpack/sharing/consume/default/react-dom/react-dom": () => (loadSingletonVersionCheckFallback("default", "react-dom", [1,18,1,0], () => (() => (__webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js"))))),
-/******/ 			"webpack/sharing/consume/default/react/react": () => (loadSingletonVersionCheckFallback("default", "react", [1,18,1,0], () => (() => (__webpack_require__(/*! react */ "./node_modules/react/index.js")))))
+/******/ 			"webpack/sharing/consume/default/react-dom/react-dom": () => (loadSingletonVersionCheckFallback("default", "react-dom", [1,18,0,0], () => (() => (__webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js"))))),
+/******/ 			"webpack/sharing/consume/default/react/react": () => (loadSingletonVersionCheckFallback("default", "react", [1,18,0,0], () => (() => (__webpack_require__(/*! react */ "./node_modules/react/index.js")))))
 /******/ 		};
 /******/ 		var initialConsumes = ["webpack/sharing/consume/default/react/react"];
 /******/ 		initialConsumes.forEach((id) => {
@@ -588,7 +557,7 @@ module.exports = new Promise((resolve, reject) => {
 /******/ 			}
 /******/ 		});
 /******/ 		var chunkMapping = {
-/******/ 			"src_bootstrap_js": [
+/******/ 			"src_bootstrap_js-webpack_sharing_consume_default_react-dom_react-dom": [
 /******/ 				"webpack/sharing/consume/default/react-dom/react-dom"
 /******/ 			]
 /******/ 		};
