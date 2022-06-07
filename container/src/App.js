@@ -1,22 +1,29 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 
 import Modal from 'modal/modal';
 import Navigation from 'header/Navigation';
 import { load } from 'web-component-load' ;
 
+// import srcData from '../api/mocks.json';
+import { data } from '../api/data';
+
 function App() {
-    const currentDate = new Date();
+    const ref = useRef(null);
 
     useEffect(() => {
+        const calendar = ref.current;
+        calendar.currentDate = new Date();
+        calendar.srcData = data;
         load('http://localhost:5000');
+        console.log(calendar)
     }, []);
 
 return (
     <div className="App">
        <Navigation />
-       <h1>Mfe Container Nova</h1>
        <Modal />
-       <calendar-component current-date={currentDate} />
+       <calendar-component ref={ref} />
+       <add-activity-button-component />
     </div>
 );
 
