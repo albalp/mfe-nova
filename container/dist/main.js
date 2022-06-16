@@ -15,7 +15,7 @@
   \**********************/
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("Promise.all(/*! import() */[__webpack_require__.e(\"vendors-node_modules_react-dom_client_js-node_modules_react_jsx-runtime_js\"), __webpack_require__.e(\"src_bootstrap_js-webpack_sharing_consume_default_react-dom_react-dom\")]).then(__webpack_require__.bind(__webpack_require__, /*! ./bootstrap */ \"./src/bootstrap.js\"));\n\n//# sourceURL=webpack://container/./src/index.js?");
+eval("Promise.all(/*! import() */[__webpack_require__.e(\"vendors-node_modules_react-dom_client_js-node_modules_react_jsx-runtime_js-node_modules_web-c-c8a00c\"), __webpack_require__.e(\"src_bootstrap_js-webpack_sharing_consume_default_react-dom_react-dom\")]).then(__webpack_require__.bind(__webpack_require__, /*! ./bootstrap */ \"./src/bootstrap.js\"));\n\n//# sourceURL=webpack://container/./src/index.js?");
 
 /***/ }),
 

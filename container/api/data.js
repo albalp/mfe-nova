@@ -1,7 +1,8 @@
-export const data = [
+
+ const dataAPI = [
     {
       AccountName: "Itexico",
-      ActivityDate: "2022-05-06T09:35:04",
+      ActivityDate: "2022-06-06T09:35:04",
       ActivityID: 0,
       CategoryName: "Available",
       Comments: "string",
@@ -17,7 +18,7 @@ export const data = [
     },
     {
       AccountName: "Itexico",
-      ActivityDate: "2022-05-06T09:35:04",
+      ActivityDate: "2022-06-06T09:35:04",
       ActivityID: 0,
       CategoryName: "Available",
       Comments: "string",
@@ -33,7 +34,7 @@ export const data = [
     },
     {
       AccountName: "Itexico",
-      ActivityDate: "2022-05-06T09:35:04",
+      ActivityDate: "2022-06-06T09:35:04",
       ActivityID: 0,
       CategoryName: "Available",
       Comments: "string",
@@ -49,7 +50,7 @@ export const data = [
     },
     {
       AccountName: "Itexico",
-      ActivityDate: "2022-05-06T09:35:04",
+      ActivityDate: "2022-06-06T09:35:04",
       ActivityID: 0,
       CategoryName: "Available",
       Comments: "string",
@@ -65,7 +66,7 @@ export const data = [
     },
     {
       AccountName: "Itexico",
-      ActivityDate: "2022-05-06T09:35:04",
+      ActivityDate: "2022-06-06T09:35:04",
       ActivityID: 0,
       CategoryName: "Available",
       Comments: "string",
@@ -80,3 +81,4 @@ export const data = [
       activeInProject: false,
     },
   ];
+export default dataAPI;
