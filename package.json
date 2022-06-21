@@ -1,9 +1,0 @@
-{
-  "dependencies": {
-    "styled-components": "^5.3.5",
-    "web-component-load": "^1.0.1"
-  },
-  "devDependencies": {
-    "babel-plugin-styled-components": "^2.0.7"
-  }
-}
