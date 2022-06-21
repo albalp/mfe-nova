@@ -32,7 +32,7 @@ function App() {
 
 return (
     <div className="App">
-       <Navigation />
+        <Navigation />
        <Modal />
        <Button>Add Activity</Button>
        <calendar-component ref={refCalendar} />

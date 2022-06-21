@@ -11,7 +11,8 @@
     "test": "webpack test --coverage --watch",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "api": "json-server --watch api/db.json --port 8080"
   },
   "keywords": [],
   "author": "Diana Ayala",
