@@ -3,26 +3,39 @@ import React, { useEffect, useRef } from 'react';
 import Modal from 'modal/modal';
 import Navigation from 'header/Navigation';
 import { load } from 'web-component-load' ;
-
-// import srcData from '../api/mocks.json';
-import { data } from '../api/data';
+import styled from 'styled-components';
+import dataAPI from '../api/data';
 
 function App() {
-    const ref = useRef(null);
-
+    const Button = styled.button`
+    background: transparent;
+    border-radius: 3px;
+    border: 2px solid palevioletred;
+    color: palevioletred;
+    margin: 0 1em;
+    padding: 0.25em 1em;
+    cursor: pointer;
+    &:hover {
+        background-color: palevioletred;
+        color: white;
+    }
+    `
+    const refCalendar = useRef();
     useEffect(() => {
-        const calendar = ref.current;
-        calendar.currentDate = new Date();
-        calendar.srcData = data;
+        if (refCalendar.current){
+        const calendar = refCalendar.current;
+        calendar.currentDate = new Date;
+        calendar.srcData = dataAPI;
+    }
         load('http://localhost:5000');
-        console.log(calendar)
     }, []);
 
 return (
     <div className="App">
-       <Navigation />
+        <Navigation />
        <Modal />
-       <calendar-component ref={ref} />
+       <Button>Add Activity</Button>
+       <calendar-component ref={refCalendar} />
        <add-activity-button-component />
     </div>
 );
