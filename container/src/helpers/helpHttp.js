@@ -1,9 +1,9 @@
 export const helpHttp = () => {
-  constcustomFetch = (endpoint, options) => {
-    constdefaultHeaders = {
+  const customFetch = (options) => {
+    const defaultHeaders = {
       accept: "application/json",
     };
-    constcontroller = new AbortController();
+    const controller = new AbortController();
     options.signal = controller.signal;
     options.method = options.method || "GET";
     options.header = options.header
@@ -17,20 +17,20 @@ export const helpHttp = () => {
       statusText: res.statusText || "Ocurrio un error",
     }).catch((err) => err);
   };
-  constget = (url, options = {}) => customFetch(url, options);
-  constpost = (url, options = {}) => {
+  const get = (url, options = {}) => customFetch(url, options);
+  const post = (url, options = {}) => {
     options.method = "POST";
-    returncustomFetch(url, options);
+    return customFetch(url, options);
   };
-  constput = (url, options = {}) => {
+  const put = (url, options = {}) => {
     options.method = "PUT";
     returncustomFetch(url, options);
   };
-  constdel = (url, options = {}) => {
+  const del = (url, options = {}) => {
     options.method = "DELETE";
     returncustomFetch(url, options);
   };
-  constpatch = (url, options = {}) => {
+  const patch = (url, options = {}) => {
     options.method = "PATCH";
     returncustomFetch(url, options);
   };
