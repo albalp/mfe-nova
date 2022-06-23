@@ -17,22 +17,21 @@ function App() {
   useEffect(() => {
     api.get(urlActivities).then((res) => {
       if (!res.err) {
-        console.log(res)
         setActivity(res);
       } else {
         setActivity(null);
       }
     });
-  })
+  }, [])
 
   useEffect(() => {
     if (refCalendar.current) {
       const calendar = refCalendar.current;
       calendar.currentDate = new Date();
-      calendar.srcData = dataAPI;
+      calendar.srcData = activity;
     }
     load("http://localhost:5000");
-  }, []);
+  }, [activity]);
 
   return (
     <div className="App">
