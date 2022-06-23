@@ -1,5 +1,5 @@
 {
-  "project": {
+  "project": [{
     "AccountName": "iTexico",
     "ProjectAccountID": 0,
     "ProjectId": 0,
@@ -43,10 +43,83 @@
     "ProjectEndDate": "2022-08-13T09:35:04",
     "ProjectIsActive": false
   },
+  {
+    "AccountName": "iTexico",
+    "ProjectAccountID": 1,
+    "ProjectId": 1,
+    "ProjectName": "Bullpen",
+    "ProjectCategories": [
+      {
+        "CategoryName": "Project related meeting",
+        "CategoryID": 0
+      },
+      {
+        "CategoryName": "Training & Development(not project related)",
+        "CategoryID": 1
+      }
+    ],
+    "ProjectColor": "green",
+    "ProjectStartDate": "2022-06-06T09:35:04",
+    "ProjectEndDate": "2022-08-13T09:35:04",
+    "ProjectIsActive": false
+  },
+  {
+    "AccountName": "iTexico",
+    "ProjectAccountID": 2,
+    "ProjectId": 2,
+    "ProjectName": "Talent Management",
+    "ProjectCategories": [
+      {
+        "CategoryName": "Nom Paid Day off",
+        "CategoryID": 0
+      },
+      {
+        "CategoryName": "Onboarding",
+        "CategoryID": 1
+      },
+      {
+        "CategoryName": "Time by Time",
+        "CategoryID": 2
+      },
+      {
+        "CategoryName": "Training & Developement(not project related)",
+        "CategoryID": 3
+      },
+      {
+        "CategoryName": "Vacation",
+        "CategoryID": 4
+      }
+    ],
+    "ProjectColor": "green2",
+    "ProjectStartDate": "2022-06-06T09:35:04",
+    "ProjectEndDate": "2022-08-13T09:35:04",
+    "ProjectIsActive": false
+  },
+  {
+    "AccountName": "iTexico",
+    "ProjectAccountID": 1,
+    "ProjectId": 1,
+    "ProjectName": "Laboratoria JS",
+    "ProjectCategories": [
+      {
+        "CategoryName": "Training",
+        "CategoryID": 0
+      },
+      {
+        "CategoryName": "Training & Development(not project related)",
+        "CategoryID": 1
+      }
+    ],
+    "ProjectColor": "green",
+    "ProjectStartDate": "2022-06-06T09:35:04",
+    "ProjectEndDate": "2022-08-13T09:35:04",
+    "ProjectIsActive": false
+  }
+],
   "activity": [
     {
       "AccountName": "iTexico",
-      "ActivityDate": "2022-05-15T09:35:04",
+      "ActivityDate": "2022-06-15T09:35:04",
       "ActivityID": 0,
       "CategoryName": "Available",
       "Comments": "React redux",
@@ -61,40 +134,38 @@
       "activeInProject": false
     },
     {
-        "AccountName": "Itexico",
-        "ActivityDate": "2022-06-06T09:35:04",
-        "ActivityID": 0,
-        "CategoryName": "Available",
-        "Comments": "string",
-        "EmployeeID": 0,
-        "ProjectColor": "blue",
-        "ProjectID": 0,
-        "ProjectName": "Delivery",
-        "StepID": 0,
-        "Task": "esto es un ticket",
-        "TypeID": 0,
-        "value": 5,
-        "activeInProject": false
-      },
-      {
-        "AccountName": "Itexico",
-        "ActivityDate": "2022-06-06T09:35:04",
-        "ActivityID": 0,
-        "CategoryName": "Available",
-        "Comments": "string",
-        "EmployeeID": 0,
-        "ProjectColor": "blue",
-        "ProjectID": 0,
-        "ProjectName": "Delivery",
-        "StepID": 0,
-        "Task": "esto es un ticket",
-        "TypeID": 0,
-        "value": 5,
-        "activeInProject": false
-      }
-
+      "AccountName": "Itexico",
+      "ActivityDate": "2022-06-09T09:35:04",
+      "ActivityID": 0,
+      "CategoryName": "Available",
+      "Comments": "string",
+      "EmployeeID": 0,
+      "ProjectColor": "blue",
+      "ProjectID": 0,
+      "ProjectName": "Delivery",
+      "StepID": 0,
+      "Task": "esto es un ticket",
+      "TypeID": 0,
+      "value": 5,
+      "activeInProject": false
+    },
+    {
+      "AccountName": "Itexico",
+      "ActivityDate": "2022-06-12T09:35:04",
+      "ActivityID": 0,
+      "CategoryName": "Available",
+      "Comments": "string",
+      "EmployeeID": 0,
+      "ProjectColor": "blue",
+      "ProjectID": 0,
+      "ProjectName": "Delivery",
+      "StepID": 0,
+      "Task": "esto es un ticket",
+      "TypeID": 0,
+      "value": 5,
+      "activeInProject": false
+    }
   ],
-
   "user": {
     "Address": "Bahias 3 Bosques de Chapala",
     "AvilableTravel": true,

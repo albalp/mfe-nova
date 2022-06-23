@@ -1,36 +1,47 @@
 export const helpHttp = () => {
-  constcustomFetch = (endpoint, options) => {
-    constdefaultHeaders = {
+  const customFetch = (endpoint, options) => {
+    const defaultHeaders = {
       accept: "application/json",
     };
-    constcontroller = new AbortController();
+    const controller = new AbortController();
     options.signal = controller.signal;
+    
     options.method = options.method || "GET";
     options.header = options.header
       ? { ...defaultHeaders, ...options.headers }
       : defaultHeaders;
-    options.body = JSON.stringify(options.body) || false;
+    
+      options.body = JSON.stringify(options.body) || false;
     if (!options.body) delete options.body; // console.log(options);setTimeout(()=> controller.abort(),3000);returnfetch(endpoint,options).then((res)=>res.ok? res.json():
-    Promise.reject({
-      err: true,
-      status: res.status || "00",
-      statusText: res.statusText || "Ocurrio un error",
-    }).catch((err) => err);
+   
+    setTimeout(() => controller.abort(), 3000);
+
+    return fetch(endpoint, options)
+      .then((res) =>
+        res.ok
+          ? res.json()
+          : Promise.reject({
+              err: true,
+              status: res.status || '00',
+              statusText: res.statusText || 'Ocurrio un error'
+            })
+      )
+      .catch((err) => err);
   };
-  constget = (url, options = {}) => customFetch(url, options);
-  constpost = (url, options = {}) => {
+  const get = (url, options = {}) => customFetch(url, options);
+  const post = (url, options = {}) => {
     options.method = "POST";
-    returncustomFetch(url, options);
+    return customFetch(url, options);
   };
-  constput = (url, options = {}) => {
+  const put = (url, options = {}) => {
     options.method = "PUT";
     returncustomFetch(url, options);
   };
-  constdel = (url, options = {}) => {
+  const del = (url, options = {}) => {
     options.method = "DELETE";
     returncustomFetch(url, options);
   };
-  constpatch = (url, options = {}) => {
+  const patch = (url, options = {}) => {
     options.method = "PATCH";
     returncustomFetch(url, options);
   };
