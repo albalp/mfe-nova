@@ -1,18 +1,28 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import {Observable} from 'windowed-observable';
 
 import Modal from "modal/modal";
 import Navigation from "header/Navigation";
-import { load } from "web-component-load";
 
+import { load } from "web-component-load";
 import { helpHttp } from "./helpers/helpHttp";
-import dataAPI from "../api/data";
 
 function App() {
   const [activity, setActivity] = useState([]);
+  const [projects, setProjects] = useState([]);
+  const [category, setCategory] = useState([]);
+  
   const refCalendar = useRef();
+  
   const api = helpHttp();
 
   const urlActivities = 'http://localhost:8080/activity'
+  const urlProjects = 'http://localhost:8080/project'
+
+  const observableProject = new Observable('data-projects');
+  // const observableCategory = new Observable('data-category');
+  observableProject.publish(projects);
+  // observableCategory.publish(category);
 
   useEffect(() => {
     api.get(urlActivities).then((res) => {
@@ -22,16 +32,25 @@ function App() {
         setActivity(null);
       }
     });
-  }, [])
+    api.get(urlProjects).then((res) => {
+      if (!res.err) {
+        setProjects(res);
+        res.map((elem) => setCategory(elem));
+      } else {
+        setProjects(null);
+      }
+    });
+  }, []);
 
   useEffect(() => {
-    if (refCalendar.current) {
-      const calendar = refCalendar.current;
+    const calendar = refCalendar.current;
       calendar.currentDate = new Date();
+      console.log('actividades del calendario', activity);
       calendar.srcData = activity;
-    }
     load("http://localhost:5000");
-  }, [activity]);
+    // const categories = ()
+
+  }, []);
 
   return (
     <div className="App">
